@@ -9,7 +9,7 @@ Liskov Substitution Principle:-
     private Map groundCoffee; 
     private BrewingUnit brewingUnit;
 
-    public BasicCoffeeMachine(Map coffee_cup) { 
+    public BasicCoffeeMachine(Map coffee) { 
         this.groundCoffee = coffee; 
         this.brewingUnit = new BrewingUnit(); 
 
