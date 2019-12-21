@@ -107,4 +107,5 @@ public double Area(Shape[] shapes)
 In other words we’ve closed it for modification by opening it up for extension.
 
 
-
+When should we apply the Open/Closed Principle?
+If we look back our previous example, where did we go wrong? Clearly even our first implementation of the Area wasn’t open for extension. Should it have been? I’d say that it all depends on context. If we had had very strong suspicions that Aldford would ask us to support other shapes later on we could probably have prepared for that from the get-go. However, often it’s not a good idea to try to anticipate changes in requirements ahead of time, as at least my psychic abilities haven’t surfaced yet and preparing for future changes can easily lead to overly complex designs. Instead, I would suggest that we focus on writing code that is well written enough so that it’s easy to change if the requirements change.
