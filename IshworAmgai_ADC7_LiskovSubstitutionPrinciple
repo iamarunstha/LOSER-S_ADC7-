@@ -1,19 +1,19 @@
-Liskov Substitution Principle
+Liskov Substitution Principle:-
     The Liskov Substitution Principle (LSP, lsp) is a concept in Object Oriented Programming that states:
-     Functions that use pointers or references to base classes must be able to use objects of derived classes
-        without knowing it
+     The functions that use pointers or references to base classes must be able to use objects of derived classes
+        without knowing it.
         example:
-        public class BasicCoffeeMachine { 
+        public class BasicCoffeeMach { 
 
     private Map configMap; 
     private Map groundCoffee; 
     private BrewingUnit brewingUnit;
 
-    public BasicCoffeeMachine(Map coffee) { 
+    public BasicCoffeeMachine(Map coffee_glass ) { 
         this.groundCoffee = coffee; 
         this.brewingUnit = new BrewingUnit(); 
 
-        this.configMap = new HashMap(); 
+        this.configMap = new HashMap(); hello world
         this.configMap.put(CoffeeSelection.FILTER_COFFEE, 
             new Configuration(30, 480)); 
     } 
@@ -31,7 +31,7 @@ Liskov Substitution Principle
     } 
 
     private CoffeeDrink brewFilterCoffee() { 
-        Configuration config = configMap.get(CoffeeSelection.FILTER_COFFEE); 
+        Configuration config = configMap.get(CoffeeSelection.FILTER_COFFEE); /  GroundCoffee groundCoffee = this.groundCoffee.get(
 
         // get the coffee 
         GroundCoffee groundCoffee = this.groundCoffee.get(
