@@ -1,0 +1,6 @@
+I have created bridge in git hub. Push changes to GitHub
+So far we have only modified our local copy of the repository. To add the changes to your git repo files on your computer to the version of your repository on GitHub, you need to push them GitHub.
+
+You can push your changes to GitHub with:
+
+git push
