@@ -61,12 +61,17 @@ public double Area(object[] shapes)
 }
 The solution works and Aldford is happy.
 
-Only, a week later he calls us and asks: “extending the AreaCalculator class to also calculate the area of triangles isn’t very hard, is it?”. Of course in this very basic scenario it isn’t but it does require us to modify the code. That is, AreaCalculator isn’t closed for modification as we need to change it in order to extend it. Or in other words: it isn’t open for extension.
+Only, a week later he calls us and asks: “extending the AreaCalculator class to also calculate the area of triangles isn’t very 
+hard, is it?”. Of course in this very basic scenario it isn’t but it does require us to modify the code. That is, AreaCalculator
+ isn’t closed for modification as we need to change it in order to extend it. Or in other words: it isn’t open for extension.
 
-In a real world scenario where the code base is ten, a hundred or a thousand times larger and modifying the class means redeploying it’s assembly/package to five different servers that can be a pretty big problem. Oh, and in the real world Aldford would have changed the requirements five more times since you read the last sentence :-)
+In a real world scenario where the code base is ten, a hundred or a thousand times larger and modifying the class means redeploying
+ it’s assembly/package to five different servers that can be a pretty big problem. Oh, and in the real world Aldford would have changed 
+ he requirements five more times since you read the last sentence :-)
 
 A solution that abides by the Open/Closed Principle
-One way of solving this puzzle would be to create a base class for both rectangles and circles as well as any other shapes that Aldford can think of which defines an abstract method for calculating it’s area.
+One way of solving this puzzle would be to create a base class for both rectangles and circles as well as any other shapes that Aldford
+ can think of which defines an abstract method for calculating it’s area. merge
 
 public abstract class Shape
 {
@@ -92,7 +97,8 @@ public class Circle : Shape
         return Radius*Radius*Math.PI;
     }
 }
-As we’ve moved the responsibility of actually calculating the area away from AreaCalculator’s Area method it is now much simpler and robust as it can handle any type of Shape that we throw at it.
+As we’ve moved the responsibility of actually calculating the area away from AreaCalculator’s Area method it is now much simpler and 
+robust as it can handle any type of Shape that we throw at it.
 
 public double Area(Shape[] shapes)
 {
@@ -108,4 +114,9 @@ In other words we’ve closed it for modification by opening it up for extension
 
 
 When should we apply the Open/Closed Principle?
-If we look back our previous example, where did we go wrong? Clearly even our first implementation of the Area wasn’t open for extension. Should it have been? I’d say that it all depends on context. If we had had very strong suspicions that Aldford would ask us to support other shapes later on we could probably have prepared for that from the get-go. However, often it’s not a good idea to try to anticipate changes in requirements ahead of time, as at least my psychic abilities haven’t surfaced yet and preparing for future changes can easily lead to overly complex designs. Instead, I would suggest that we focus on writing code that is well written enough so that it’s easy to change if the requirements change.
+If we look back our previous example, where did we go wrong? Clearly even our first implementation of the Area wasn’t open for 
+extension. Should it have been? I’d say that it all depends on context. If we had had very strong suspicions that Aldford would 
+ask us to support other shapes later on we could probably have prepared for that from the get-go. However, often it’s not a good 
+idea to try to anticipate changes in requirements ahead of time, as at least my psychic abilities haven’t surfaced yet and preparing
+ for future changes can easily lead to overly complex designs. Instead, I would suggest that we focus on writing code that is well
+  written enough so that it’s easy to change if the requirements change.
