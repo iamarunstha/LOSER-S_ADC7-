@@ -3,7 +3,7 @@ Liskov Substitution Principle:-
      The functions that use pointers or references to base classes must be able to use objects of derived classes
         without knowing it.
         example:
-        public class BasicCoffeeMachine { 
+        public class BasicCoffeeMach { 
 
     private Map configMap; 
     private Map groundCoffee; 
