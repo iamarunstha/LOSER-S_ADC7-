@@ -14,7 +14,11 @@ inheritance and polymorphism, which is what this example will illustrate.
 An example – calculating area
 Let’s say that we’ve got a Rectangle class. As most rectangles that I’ve encountered it has a width and a height.
 
+<<<<<<< HEAD
+public class Rectangle triangle
+=======
 public class Rectangle_Squre
+>>>>>>> 50b7d77914480335eb334c51573d2a52da6fa20d
 {
     public double Width { get; set; }
     public double Height { get; set; }
