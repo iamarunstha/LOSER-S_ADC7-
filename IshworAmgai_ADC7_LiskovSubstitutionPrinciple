@@ -1,7 +1,7 @@
-Liskov Substitution Principle
+Liskov Substitution Principle:-
     The Liskov Substitution Principle (LSP, lsp) is a concept in Object Oriented Programming that states:
-     Functions that use pointers or references to base classes must be able to use objects of derived classes
-        without knowing it
+     The functions that use pointers or references to base classes must be able to use objects of derived classes
+        without knowing it.
         example:
         public class BasicCoffeeMachine { 
 
