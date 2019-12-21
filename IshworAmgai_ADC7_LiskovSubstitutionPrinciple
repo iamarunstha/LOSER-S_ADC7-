@@ -31,7 +31,7 @@ Liskov Substitution Principle:-
     } 
 
     private CoffeeDrink brewFilterCoffee() { 
-        Configuration config = configMap.get(CoffeeSelection.FILTER_COFFEE); 
+        Configuration config = configMap.get(CoffeeSelection.FILTER_COFFEE); /  GroundCoffee groundCoffee = this.groundCoffee.get(
 
         // get the coffee 
         GroundCoffee groundCoffee = this.groundCoffee.get(
